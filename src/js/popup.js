@@ -10,7 +10,7 @@ function populate_iframe()
     {
       document.getElementById('configure_me').setAttribute('style','display:block');
       document.getElementById('source').setAttribute('style','display:none');
-      chrome.tabs.create({'url': chrome.extension.getURL("/fancy-settings/index.html") } )
+      chrome.tabs.create({'url': chrome.extension.getURL("/fancy-settings/index.html") } );
     } else {
       document.getElementById('configure_me').setAttribute('style','display:none');
       document.getElementById('source').setAttribute('style','display:block');
