@@ -1,18 +1,16 @@
-chrome.runtime.onInstalled.addListener(function() {
-  var context = "link";
-  var title = "Add link to wallabag";
-  var id = chrome.contextMenus.create({"title": title, "contexts":[context],
-    "id": "context" + context});  
-});
-
-chrome.runtime.onInstalled.addListener(function() {
+function initPage() {
   var context = "page";
   var title = "Add page to wallabag";
   var id = chrome.contextMenus.create({"title": title, "contexts":[context],
     "id": "context" + context});  
-});
+}
 
-chrome.contextMenus.onClicked.addListener(onClickHandler);
+function initLink() {
+  var context = "link";
+  var title = "Add link to wallabag";
+  var id = chrome.contextMenus.create({"title": title, "contexts":[context],
+    "id": "context" + context});  
+}
 
 function onClickHandler(info, tab) {
   var settings = new Store("settings", {});
@@ -34,3 +32,9 @@ function onClickHandler(info, tab) {
 
   }
 };
+
+chrome.runtime.onInstalled.addListener(initPage);
+chrome.runtime.onInstalled.addListener(initLink);
+chrome.runtime.onStartup.addListener(initPage);
+chrome.runtime.onStartup.addListener(initLink);
+chrome.contextMenus.onClicked.addListener(onClickHandler);
