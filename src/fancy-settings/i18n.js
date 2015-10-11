@@ -21,9 +21,9 @@ this.i18n = {
         "en": "No matches were found.",
         "de": "Keine Übereinstimmungen gefunden."
     },
-    
-    
-    
+
+
+
     "information": {
         "en": "Information",
         "de": "Information"
@@ -53,7 +53,9 @@ this.i18n = {
     },
     "description": {
         "en": "Type here the base URL of your wallabag.<br>\
-            It should look something like <pre>http://www.domain.com/wallabag/</pre>.",
+            It should look something like <pre>http://www.domain.com/wallabag/</pre>.<br>\
+            If you registered a framabag account, your URL should be:<br>\
+            <pre>https://www.framabag.org/u/username/</pre>",
         "fr": "Saisissez ici l'URL racine de votre wallabag.<br>\
             Elle devrait ressembler à :<pre>http://www.domain.com/wallabag/</pre>"
     },
